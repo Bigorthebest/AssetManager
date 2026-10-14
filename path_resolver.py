@@ -6,7 +6,7 @@ file_extension = "ma"
 file_version = 1 
 
 
-def get_file_path(name,kind,catergory,type,extension,version,suffix = None):
+def get_file_path(name,kind,catergory,type,extension,version = 1,suffix = None):
     """Fonction qui va retourner le bon path avec les informations de l'assets en param"""
     file_version_padded = str(version).zfill(3)
     if suffix == None :
