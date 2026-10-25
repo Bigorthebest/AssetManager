@@ -5,11 +5,11 @@ import os
 path_du_projet = "D:/MonSuperProjet/"
 
 template_collection = {
-    "blend": "/home/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_templates/model.blend",
-    "png": "/home/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_templates/texture.png",
-    "psd": "/home/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_templates/texture.psd",
-    "tif": "/home/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_templates/texture.tif",
-    "nk": "/home/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_templates/compo.nk",
+    "blend": "D:/Python PROJ/AssetManager/_templates/model.blend",
+    "png": "/_templates/texture.png",
+    "psd": "/_templates/texture.psd",
+    "tif": "/_templates/texture.tif",
+    "nk": "/_templates/compo.nk",
 }
 
 def create_file_path(name,kind,catergory,type,extension,version = 1,suffix = None):
@@ -24,5 +24,5 @@ def create_file_path(name,kind,catergory,type,extension,version = 1,suffix = Non
 
 if __name__ == "__main__" :
     print("Debut prog")
-    get_file_path('Juno','character','animal','model','blend')
+    create_file_path('Juno','character','animal','model','blend')
     print("Fin du programme create_asset.py")
