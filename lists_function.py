@@ -44,4 +44,15 @@ def get_asset_files(project_path, kind, category, asset_name):
     return file_filtered_list
 
 if __name__ == "__main__" : 
-    pass
+    
+    kind_list = get_project_kinds("/Users/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_dummy_project")
+    print(kind_list)
+
+    categories_list = get_kind_categories("/Users/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_dummy_project", "character")
+    print(categories_list)
+
+    assets_list = get_category_assets("/Users/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_dummy_project", "character", "animal")
+    print(assets_list)
+
+    files_list = get_asset_files("/Users/diffty/Documents/_Projets/Cours/2024_10_CoursPython/m1/code/_dummy_project", "character", "human", "freddy")
+    print(files_list)
