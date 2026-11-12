@@ -1,10 +1,11 @@
 from PySide6.QtWidgets import QMainWindow
-from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QHBoxLayout, QListWidget
-
+from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QHBoxLayout, QListWidget, QPushButton
+from lists_function import get_asset_files, get_category_assets,get_kind_categories,get_project_kinds
 
 class AssetBrowserApp : 
     def __init__(self):
         print("Activation de l'assets Browser")
+        self.path_project = "D:/Python PROJ/AssetManager/Projet/"
         self.app = QApplication()
 
         self.fenetre_principale = QMainWindow()
@@ -35,6 +36,9 @@ class AssetBrowserApp :
     def afficher_fenetre(self):
         self.fenetre_principale.show()
 
+    def update_list(self): 
+        get_project_kinds(self.path_project)
+        
 
     
 asset_browser_app = AssetBrowserApp()
